@@ -49,3 +49,20 @@
     <script src="script.js"></script>
 </body>
 </html>
+function calculate() {
+    // Get the expression from the input field
+    const expression = document.getElementById('expression').value;
+
+    // Evaluate the expression and handle errors
+    try {
+        // Using eval to evaluate the expression
+        const result = eval(expression);
+
+        // Display the result
+        document.getElementById('result').textContent = `Result: ${result}`;
+    } catch (error) {
+        // Display an error message
+        document.getElementById('result').textContent = 'Invalid expression';
+    }
+}
+
